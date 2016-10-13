@@ -1,0 +1,386 @@
+{
+  "_type": "export",
+  "__export_format": 2,
+  "__export_date": "2016-10-08T12:55:23.268Z",
+  "__export_source": "insomnia.desktop.app:v3.5.11",
+  "resources": [
+    {
+      "modified": 1475931009325,
+      "created": 1475558825027,
+      "parentId": null,
+      "name": "Yunge",
+      "_id": "wrk_itv1mk3n7KZZGZMCQfvF2nf9",
+      "_type": "workspace"
+    },
+    {
+      "modified": 1475913131815,
+      "created": 1475558894316,
+      "parentId": "wrk_itv1mk3n7KZZGZMCQfvF2nf9",
+      "name": "Base Environment",
+      "data": {
+        "host": "http://218.78.241.140:8080/api",
+        "authtoken": "368d1afb4c6e2a31d05ab8faf69a8bb3"
+      },
+      "_id": "env_itv1o1kcPVJTCCUEfy88BFuy",
+      "_type": "environment"
+    },
+    {
+      "modified": 1475918714255,
+      "created": 1475559002877,
+      "parentId": "wrk_itv1mk3n7KZZGZMCQfvF2nf9",
+      "name": "Default Jar",
+      "cookies": [],
+      "_id": "jar_itv1qdbx2yCABnGVwmVdWJ7x",
+      "_type": "cookie_jar"
+    },
+    {
+      "modified": 1475565363940,
+      "created": 1475558882867,
+      "parentId": "wrk_itv1mk3n7KZZGZMCQfvF2nf9",
+      "name": "申请",
+      "environment": {},
+      "_id": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "_type": "request_group"
+    },
+    {
+      "modified": 1475560344432,
+      "created": 1475558971363,
+      "parentId": "wrk_itv1mk3n7KZZGZMCQfvF2nf9",
+      "name": "账号",
+      "environment": {},
+      "_id": "fld_itv1pp0jDSmSWEtVyEBtbDtx",
+      "_type": "request_group"
+    },
+    {
+      "modified": 1475560367625,
+      "created": 1475559604895,
+      "parentId": "wrk_itv1mk3n7KZZGZMCQfvF2nf9",
+      "name": "课程",
+      "environment": {},
+      "_id": "fld_itv239uny5z2tDkDzX8z9EVw",
+      "_type": "request_group"
+    },
+    {
+      "modified": 1475560344431,
+      "created": 1475558888452,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/applications",
+      "name": "我的申请列表",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv1nx1g2fST8STVuQK3sKrH",
+      "_type": "request"
+    },
+    {
+      "modified": 1475918649576,
+      "created": 1475559454359,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/applications",
+      "name": "申请调课",
+      "method": "POST",
+      "body": "application_type=1&from_course_id=718&to_course_id=364&content=test%20application&reason_type=1&application_files_ids%5B%5D=1&application_files_ids%5B%5D=2",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        },
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv201p3dst3zgVVmhvMEXEM",
+      "_type": "request"
+    },
+    {
+      "modified": 1475918653194,
+      "created": 1475560446424,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/applications",
+      "name": "申请代课",
+      "method": "POST",
+      "body": "application_type=2&teacher_id=2&from_course_id=718&content=test%20application&reason_type=1&application_files_ids%5B%5D=1&application_files_ids%5B%5D=2",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        },
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv2lb6gJ6WnPgqgQC5Dspjp",
+      "_type": "request"
+    },
+    {
+      "modified": 1475680479878,
+      "created": 1475562635587,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/manage_applications",
+      "name": "管理员 - 申请列表",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv3w8cjpKaY3cHgmMUbrBDj",
+      "_type": "request"
+    },
+    {
+      "modified": 1475680496122,
+      "created": 1475562734752,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/manage_applications/1",
+      "name": "管理员 - 申请通过",
+      "method": "PUT",
+      "body": "status=1",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv3ycv4NGmpzHDZ8NTA9gDG",
+      "_type": "request"
+    },
+    {
+      "modified": 1475680517700,
+      "created": 1475562784301,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/manage_applications/2",
+      "name": "管理员 - 拒绝申请",
+      "method": "PUT",
+      "body": "status=-1",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv3zf3hvnspKmSRm8ebktah",
+      "_type": "request"
+    },
+    {
+      "modified": 1475566253486,
+      "created": 1475562837448,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/application_files",
+      "name": "申请附件",
+      "method": "POST",
+      "body": "file=",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv40k3sqNzzYDUUx2cfK9zA",
+      "_type": "request"
+    },
+    {
+      "modified": 1475565934924,
+      "created": 1475565918654,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/application_reasons",
+      "name": "申请类型",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv5ulkuvWjjFmWd3DazMwZf",
+      "_type": "request"
+    },
+    {
+      "modified": 1475913111552,
+      "created": 1475913090210,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/applications/6",
+      "name": "申请详情",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_iu0wjov6r6PWgGshRRWsaNVB",
+      "_type": "request"
+    },
+    {
+      "modified": 1475918712654,
+      "created": 1475918356561,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/manage_applications/2",
+      "name": "管理员 - 修改申请(调课/代课)",
+      "method": "PUT",
+      "body": "teacher_id=2&to_course_id=364",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_iu0zokepzxNwJpq77NuVuPXA",
+      "_type": "request"
+    },
+    {
+      "modified": 1475918536946,
+      "created": 1475918374124,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/applications/1",
+      "name": "删除申请(调课/代课)",
+      "method": "DELETE",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        },
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_iu0zoxykQu5gRqueYtCWQNdG",
+      "_type": "request"
+    },
+    {
+      "modified": 1475931051523,
+      "created": 1475931009268,
+      "parentId": "fld_itv1nsqbT9q6zEerW6Rbsd8j",
+      "url": "{{host}}/manage_applications/batch_update",
+      "name": "管理员 - 批量操作申请",
+      "method": "POST",
+      "body": "application_ids%5B%5D=1&application_ids%5B%5D=2&status=1",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_iu177ras9Q36XwE5UafXNC4k",
+      "_type": "request"
+    },
+    {
+      "modified": 1475560344433,
+      "created": 1475558950569,
+      "parentId": "fld_itv1pp0jDSmSWEtVyEBtbDtx",
+      "url": "{{host}}/session",
+      "name": "登录",
+      "method": "POST",
+      "body": "{\n\t\"phone\": \"18515030685\",\n\t\"password\": \"111111\"\n}",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv1p8yxAQWDhT2cD7skbE5Q",
+      "_type": "request"
+    },
+    {
+      "modified": 1475560344433,
+      "created": 1475559613876,
+      "parentId": "fld_itv239uny5z2tDkDzX8z9EVw",
+      "url": "{{host}}/courses",
+      "name": "我的课程",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv23gs4CEQxmVrccjGe5jem",
+      "_type": "request"
+    },
+    {
+      "modified": 1475560406344,
+      "created": 1475559661803,
+      "parentId": "fld_itv239uny5z2tDkDzX8z9EVw",
+      "url": "{{host}}/courses/all",
+      "name": "班级的课程",
+      "method": "GET",
+      "body": "",
+      "parameters": [
+        {
+          "name": "class_room_id",
+          "value": "1"
+        }
+      ],
+      "headers": [
+        {
+          "name": "authtoken",
+          "value": "{{authtoken}}"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_itv24hrfcjJQgX2FmNT4THmD",
+      "_type": "request"
+    }
+  ]
+}
